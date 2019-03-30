@@ -15,7 +15,7 @@ This is a mobile application I have created in an attempt to improve my online a
   - No passwords are stored in file or database.
   - Easy to use.
 
-This is my first Qt/QML/C++ application for Android/mobile devices I have created. Feel free to criticize or comment.
+This is my first C++(Qt/QML) application for Android/mobile devices I have created. Feel free to criticize or comment.
 There are desktop applications available as well, however some are not always up to date and I have left some of them discontinued/incomplete. I work on these projects in my free time only so don't expect regular updates from me.
 
 Desktop version: https://gitlab.com/Zander-Labuschagne/SecureSignIn-v4b
