@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MainForm.qml</file>
+        <file>res/cryogen_blue_portrait_dark_theme.png</file>
+    </qresource>
+</RCC>
