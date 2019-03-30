@@ -1,5 +1,5 @@
 # Secure Sign In Mobile
-This is a mobile application I have created in an attempt to improve my online account security, this is the latest mobile version of my Secure Sign In project. The older pure Android version can be found at https://gitlab.com/Zander-Labuschagne/SecureSignIn-Android. 
+This is a mobile application I have created in an attempt to improve my online account security, it is the latest mobile version (_v3_) of my Secure Sign In project and will replace the Android version (_v2_). The older pure Android version(_legacy_) can be found at https://gitlab.com/Zander-Labuschagne/SecureSignIn-Android. 
 
 ## *This application is still a work in progress*
 
