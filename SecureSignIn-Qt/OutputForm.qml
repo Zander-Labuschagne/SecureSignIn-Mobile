@@ -4,6 +4,7 @@ import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.3
 
 Page {
+	id: output_form;
 	width: Screen.desktopAvailableWidth;
 	height: Screen.desktopAvailableHeight;
 	visible: true;
@@ -25,7 +26,7 @@ Page {
 	TextField {
 	    id: password_input;
 	    x: 10;
-	    y: logo.y + logo.height + 20;
+	    y: logo.y + logo.height + 60;
 	    width: Screen.desktopAvailableWidth - (2 * this.x);
 	    height: 35;
 //	    placeholderText: "Password";
@@ -49,7 +50,7 @@ Page {
 		width: (Screen.desktopAvailableWidth - (2 * reveal.x) - (2 * 5)) * (3 / 8);
 		height: 35;
 		x: 10;
-		y: password_input.y + password_input.height + 80;
+		y: password_input.y + password_input.height + 40;
 		text: qsTr("Reveal Password");
 
 		contentItem: Text {
@@ -111,11 +112,14 @@ Page {
 			elide: Text.ElideRight;
 		    }
 
-		    background: Rectangle {
+		background: Rectangle {
 			border.color: ok.down ? "#00c4dc" : "#000000";
 			border.width: 1;
 			radius: 5;
 			color: ok.down ? "#8897f4" : "#1F2127";
-		    }
+		}
+		onClicked: {
+			stackview.pop();
+		}
 	}
 }
