@@ -2,6 +2,7 @@ import QtQuick 2.9
 import QtQuick.Controls 2.5
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.3
+import QtQuick.Dialogs 1.2
 
 Page {
 	width: Screen.desktopAvailableWidth;
@@ -168,9 +169,37 @@ Page {
 			color: encrypt_button.down ? "#8897f4" : "#1F2127";
 		    }
 		onClicked: {
-			encrypt();
-//			createWindows();
-			stackview.push("qrc:/OutputForm.qml");
+			if (password_input.length > 1 && key_input.length > 1) {
+				encrypt();
+				stackview.push("qrc:/OutputForm.qml");
+			} else if (password_input.length > 1) {
+				key_error.visible = true;
+			} else {
+				password_error.visible = true;
+			}
 		}
+	}
+
+	MessageDialog {
+		id: password_error;
+		title: "Password Error";
+		icon: StandardIcon.Warning;
+		text: "Please enter a password containing at least 2 characters";
+		//detailedText: "To replace a file means that its existing contents will be lost. " +
+		//"The file that you are copying now will be copied over it instead."
+//		standardButtons: StandardButton.Yes | StandardButton.YesToAll | StandardButton.No | StandardButton.NoToAll | StandardButton.Abort
+		standardButtons: standardButtons.Ok;
+		//Component.onCompleted: visible = true
+		//onYes: console.log("copied")
+		//onNo: console.log("didn't copy")
+		//onRejected: console.log("aborted")
+	}
+
+	MessageDialog {
+		id: key_error;
+		title: "Key Error";
+		icon: StandardIcon.Warning;
+		text: "Please enter a key containing at least 2 characters";
+		standardButtons: standardButtons.Ok;
 	}
 }
