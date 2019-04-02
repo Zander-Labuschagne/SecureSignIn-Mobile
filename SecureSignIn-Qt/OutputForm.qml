@@ -46,7 +46,7 @@ Page {
 
 	Button {
 		id: reveal;
-		width: 120;
+		width: (Screen.desktopAvailableWidth - (2 * reveal.x) - (2 * 5)) * (3 / 8);
 		height: 35;
 		x: 10;
 		y: password_input.y + password_input.height + 80;
@@ -69,9 +69,9 @@ Page {
 		    }
 	}
 
-	Button {
+    Button {
 		id: copy;
-		width: 120;
+		width: reveal.width;
 		height: 35;
 		x: reveal.x + reveal.width + 5;
 		y: reveal.y;
@@ -96,7 +96,7 @@ Page {
 
 	Button {
 		id: ok;
-		width: 60;
+		width: (Screen.desktopAvailableWidth - (2 * reveal.x) - (2 * 5)) * (2 / 8);
 		height: 35;
 		x: copy.x + copy.width + 5;
 		y: copy.y;
