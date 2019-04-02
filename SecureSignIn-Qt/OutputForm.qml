@@ -24,13 +24,14 @@ Page {
 	}
 
 	TextField {
-	    id: password_input;
+	    id: password_output;
 	    x: 10;
 	    y: logo.y + logo.height + 60;
 	    width: Screen.desktopAvailableWidth - (2 * this.x);
 	    height: 35;
 //	    placeholderText: "Password";
 	    echoMode: TextInput.Password;
+	    readOnly: true;
 	    color: "#00c4dc";
 	    background: Rectangle {
 			radius: 12;
@@ -50,7 +51,7 @@ Page {
 		width: (Screen.desktopAvailableWidth - (2 * reveal.x) - (2 * 5)) * (3 / 8);
 		height: 35;
 		x: 10;
-		y: password_input.y + password_input.height + 40;
+		y: password_output.y + password_output.height + 40;
 		text: qsTr("Reveal Password");
 
 		contentItem: Text {

@@ -5,6 +5,7 @@ import QtQuick.Window 2.3
 import QtQuick.Dialogs 1.2
 
 Page {
+
 	width: Screen.desktopAvailableWidth;
 	height: Screen.desktopAvailableHeight;
 	visible: true;
@@ -170,8 +171,8 @@ Page {
 		    }
 		onClicked: {
 			if (password_input.length > 1 && key_input.length > 1) {
-				encrypt();
-				stackview.push("qrc:/OutputForm.qml");
+				encrypt(password_input.text, key_input, compact_switch.checked);
+				//stackview.push("qrc:/OutputForm.qml");
 			} else if (password_input.length > 1) {
 				key_error.visible = true;
 			} else {

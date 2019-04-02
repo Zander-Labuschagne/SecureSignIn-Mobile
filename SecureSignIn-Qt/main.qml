@@ -9,7 +9,18 @@ ApplicationWindow {
 	title: qsTr("Secure Sign In")
 
 	//signals
-	signal encrypt();
+	signal encrypt(string password, string key, bool compact);
+
+	//slots
+	function on_encrypted(password)
+	{
+		console.log('DONE!');
+//		OutputForm.password = s;
+//		output_form.password = password;
+		output_form.password_output.text = password;
+		stackview.push("qrc:/OutputForm.qml");
+	}
+
 
 	StackView {
 		id: stackview

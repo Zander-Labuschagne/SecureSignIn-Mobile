@@ -18,7 +18,8 @@ int main(int argc, char *argv[])
 		return -1;
 
 	MainForm main_form;
-	QObject::connect(engine.rootObjects().at(0), SIGNAL(encrypt()), &main_form, SLOT(encrypt_clicked()));
+	QObject::connect(engine.rootObjects().at(0), SIGNAL(encrypt(QString, QString, bool)), &main_form, SLOT(encrypt_clicked(QString, QString, bool)));
+	QObject::connect(&main_form, SIGNAL(encrypted(QString)),(QObject *)engine.rootObjects().at(0), SLOT(on_encrypted(QString)));
 
 	return app.exec();
 }

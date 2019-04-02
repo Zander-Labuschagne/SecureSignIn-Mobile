@@ -16,7 +16,8 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
 	main.cpp \
     mainform.cpp \
-    secure_sign_in.cpp
+    secure_sign_in.cpp \
+    workerthread.cpp
 
 RESOURCES += qml.qrc
 
@@ -37,4 +38,5 @@ ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-sources
 
 HEADERS += \
     mainform.hpp \
-    secure_sign_in.hpp
+    secure_sign_in.hpp \
+    workerthread.hpp
