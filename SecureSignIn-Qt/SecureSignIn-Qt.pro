@@ -14,7 +14,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-	main.cpp
+	main.cpp \
+    mainform.cpp \
+    secure_sign_in.cpp
 
 RESOURCES += qml.qrc
 
@@ -32,3 +34,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 OTHER_FILES += \
     android-sources/AndroidManifest.xml
 ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android-sources
+
+HEADERS += \
+    mainform.hpp \
+    secure_sign_in.hpp

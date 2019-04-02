@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>MainForm.qml</file>
         <file>res/cryogen_blue_portrait_dark_theme.png</file>
+        <file>OutputForm.qml</file>
     </qresource>
 </RCC>

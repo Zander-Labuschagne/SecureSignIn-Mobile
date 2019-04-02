@@ -29,7 +29,6 @@ Page {
 	    width: Screen.desktopAvailableWidth - (2 * this.x);
 	    height: 35;
 	    placeholderText: "Password";
-//	    placeholderText: compact_switch.width;
 	    echoMode: TextInput.Password;
 	    color: "#00c4dc";
 	    background: Rectangle {
@@ -146,7 +145,7 @@ Page {
 	}
 
 	Button {
-		id: encrypt;
+		id: encrypt_button;
 		width: 350;
 		height: 35;
 		x: (Screen.desktopAvailableWidth - width) / 2;
@@ -154,20 +153,24 @@ Page {
 		text: qsTr("Encrypt Password");
 
 		contentItem: Text {
-			text: encrypt.text;
-			font: encrypt.font;
+			text: encrypt_button.text;
+			font: encrypt_button.font;
 			color: "#00c4dc";
 			horizontalAlignment: Text.AlignHCenter
 			verticalAlignment: Text.AlignVCenter
 			elide: Text.ElideRight;
-		    }
+		}
 
-		    background: Rectangle {
-//			implicitHeight: 40;
-			border.color: encrypt.down ? "#00c4dc" : "#000000";
+		background: Rectangle {
+			border.color: encrypt_button.down ? "#00c4dc" : "#000000";
 			border.width: 1;
 			radius: 5;
-			color: encrypt.down ? "#8897f4" : "#1F2127";
+			color: encrypt_button.down ? "#8897f4" : "#1F2127";
 		    }
+		onClicked: {
+			encrypt();
+//			createWindows();
+			stackview.push("qrc:/OutputForm.qml");
+		}
 	}
 }
