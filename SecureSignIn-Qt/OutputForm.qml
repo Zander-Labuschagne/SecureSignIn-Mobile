@@ -71,7 +71,7 @@ Page {
 		    }
 		onClicked: {
 			if (password_output.echoMode == TextInput.Password)
-				password_output.echoMode = TextInput.text;
+				password_output.echoMode = TextInput.Normal;
 			else
 				password_output.echoMode = TextInput.Password;
 		}

@@ -15,7 +15,7 @@ ApplicationWindow {
 	}
 
 	//signals
-	signal encrypt();
+//	signal encrypt();
 
 //	Binding {
 //		target: main_form;

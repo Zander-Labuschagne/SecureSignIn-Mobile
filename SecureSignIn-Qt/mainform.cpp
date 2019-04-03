@@ -11,23 +11,19 @@ MainForm::MainForm(QObject *parent) : QObject(parent)
 
 void MainForm::encrypt_clicked()
 {
-	qDebug() << "hier";
-	qDebug() << get_password();
-
 	SecureSignIn ssi;
-//	char *cipher_password;
+	char *cp;
+	this->set_cipher_password("");
+	if (get_compact())
+		cp = ssi.encrypt(&(password.toStdString().c_str()[0]), &(key.toStdString().c_str()[0]), 12);
+	else
+		cp = ssi.encrypt(&(password.toStdString().c_str()[0]), &(key.toStdString().c_str()[0]), 32);
 
-//	if (get_compact())
-//		this->cipher_password =  ssi.encrypt(&(password.toStdString().c_str()[0]), &(key.toStdString().c_str()[0]), 12);
-//	else
-//		this->cipher_password =  ssi.encrypt(&(password.toStdString().c_str()[0]), &(key.toStdString().c_str()[0]), 32);
+	this->set_cipher_password(cp);
+//	free(cp);
 
-	set_cipher_password("...");
-
-	//output_window = new OutputWindow(this, cipher_password, clipboard);
-	emit password_encrypted();
-	//output_window->setFixedSize(420, 130);
-	//output_window->setWindowTitle("Secure Sign In v4.0");
+	qDebug() << get_cipher_password();
+//	emit password_encrypted();
 	//wait 8sec on new thread
 //	WorkerThread *workerThread = new WorkerThread(this);
 //	connect(workerThread, &WorkerThread::resultReady, this, &MainForm::clear);
@@ -38,18 +34,17 @@ void MainForm::encrypt_clicked()
 void MainForm::clear()
 {
 	clipboard->clear();
-//	free(cipher_password);
-	this->cipher_password = "";
+//	free(this->get_cipher_password());
+	this->set_cipher_password("");
 	free(clipboard);
 }
 
 void MainForm::set_password(const QString password)
 {
-	if (this->password == password)
+	if (this->get_password() == password)
 		return;
 
 	this->password = password;
-//	emit password_changed();
 }
 
 QString MainForm::get_password()
@@ -59,11 +54,10 @@ QString MainForm::get_password()
 
 void MainForm::set_key(const QString key)
 {
-	if (this->key == key)
+	if (this->get_key() == key)
 		return;
 
 	this->key = key;
-//	emit password_encrypted();
 }
 
 QString MainForm::get_key()
@@ -73,11 +67,10 @@ QString MainForm::get_key()
 
 void MainForm::set_compact(const bool compact)
 {
-	if (this->compact == compact)
+	if (this->get_compact() == compact)
 		return;
 
 	this->compact = compact;
-//	emit passw;
 }
 
 bool MainForm::get_compact()
@@ -87,7 +80,7 @@ bool MainForm::get_compact()
 
 void MainForm::set_cipher_password(const QString &cipher_password)
 {
-	if (this->cipher_password == cipher_password)
+	if (this->get_cipher_password() == cipher_password)
 		return;
 
 	this->cipher_password = cipher_password;
@@ -102,5 +95,5 @@ QString MainForm::get_cipher_password()
 
 MainForm::~MainForm()
 {
-
+	this->clear();
 }

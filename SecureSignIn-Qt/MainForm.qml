@@ -174,7 +174,7 @@ Page {
 				main_form.password = password_input.text;
 				main_form.key = key_input.text;
 				main_form.compact = compact_switch.checked;
-				encrypt();
+				main_form.encrypt_clicked();
 				stackview.push("qrc:/OutputForm.qml");
 			} else if (password_input.length > 1) {
 				key_error.visible = true;

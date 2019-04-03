@@ -3,6 +3,7 @@
 #include <QQuickStyle>
 #include <QObject>
 #include <QQmlComponent>
+#include <QQmlContext>
 
 #include "mainform.hpp"
 
@@ -19,10 +20,6 @@ int main(int argc, char *argv[])
 	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 	if (engine.rootObjects().isEmpty())
 		return -1;
-
-	MainForm main_form;
-	QObject::connect(engine.rootObjects().at(0), SIGNAL(encrypt()), &main_form, SLOT(encrypt_clicked()));
-	//QObject::connect(&main_form, SIGNAL(encrypted(QString)),(QObject *)engine.rootObjects().at(0), SLOT(on_encrypted(QString)));
 
 	return app.exec();
 }
