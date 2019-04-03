@@ -29,7 +29,6 @@ Page {
 	    y: logo.y + logo.height + 60;
 	    width: Screen.desktopAvailableWidth - (2 * this.x);
 	    height: 35;
-//	    placeholderText: "Password";
 	    echoMode: TextInput.Password;
 	    readOnly: true;
 	    color: "#00c4dc";
@@ -44,6 +43,7 @@ Page {
 	    rightPadding: 12;
 	    topPadding: length > 0 ? 10 : 5;
 	    bottomPadding: 5;
+	    text: main_form.cipher_password;
 	}
 
 	Button {
@@ -69,6 +69,12 @@ Page {
 			radius: 5;
 			color: reveal.down ? "#8897f4" : "#1F2127";
 		    }
+		onClicked: {
+			if (password_output.echoMode == TextInput.Password)
+				password_output.echoMode = TextInput.text;
+			else
+				password_output.echoMode = TextInput.Password;
+		}
 	}
 
     Button {

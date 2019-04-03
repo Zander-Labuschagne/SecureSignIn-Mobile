@@ -171,8 +171,11 @@ Page {
 		    }
 		onClicked: {
 			if (password_input.length > 1 && key_input.length > 1) {
-				encrypt(password_input.text, key_input, compact_switch.checked);
-				//stackview.push("qrc:/OutputForm.qml");
+				main_form.password = password_input.text;
+				main_form.key = key_input.text;
+				main_form.compact = compact_switch.checked;
+				encrypt();
+				stackview.push("qrc:/OutputForm.qml");
 			} else if (password_input.length > 1) {
 				key_error.visible = true;
 			} else {
@@ -189,7 +192,7 @@ Page {
 		//detailedText: "To replace a file means that its existing contents will be lost. " +
 		//"The file that you are copying now will be copied over it instead."
 //		standardButtons: StandardButton.Yes | StandardButton.YesToAll | StandardButton.No | StandardButton.NoToAll | StandardButton.Abort
-		standardButtons: standardButtons.Ok;
+		standardButtons: StandardButton.Ok;
 		//Component.onCompleted: visible = true
 		//onYes: console.log("copied")
 		//onNo: console.log("didn't copy")
@@ -201,6 +204,6 @@ Page {
 		title: "Key Error";
 		icon: StandardIcon.Warning;
 		text: "Please enter a key containing at least 2 characters";
-		standardButtons: standardButtons.Ok;
+		standardButtons: StandardButton.Ok;
 	}
 }

@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQuickStyle>
 #include <QObject>
+#include <QQmlComponent>
 
 #include "mainform.hpp"
 
@@ -12,14 +13,16 @@ int main(int argc, char *argv[])
 
 	QGuiApplication app(argc, argv);
 
+	qmlRegisterType<MainForm>("Cryogen.MainForm", 1, 0, "Main_Form"); //Registreer die MainForm klas sodat hy toeganklik is in QML deur <cryogen.main_form 1.0> te import
+
 	QQmlApplicationEngine engine;
 	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
 	if (engine.rootObjects().isEmpty())
 		return -1;
 
 	MainForm main_form;
-	QObject::connect(engine.rootObjects().at(0), SIGNAL(encrypt(QString, QString, bool)), &main_form, SLOT(encrypt_clicked(QString, QString, bool)));
-	QObject::connect(&main_form, SIGNAL(encrypted(QString)),(QObject *)engine.rootObjects().at(0), SLOT(on_encrypted(QString)));
+	QObject::connect(engine.rootObjects().at(0), SIGNAL(encrypt()), &main_form, SLOT(encrypt_clicked()));
+	//QObject::connect(&main_form, SIGNAL(encrypted(QString)),(QObject *)engine.rootObjects().at(0), SLOT(on_encrypted(QString)));
 
 	return app.exec();
 }
