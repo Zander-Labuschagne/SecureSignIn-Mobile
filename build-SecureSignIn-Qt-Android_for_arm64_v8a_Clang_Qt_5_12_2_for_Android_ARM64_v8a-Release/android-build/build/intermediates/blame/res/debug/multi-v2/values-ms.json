@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/zander/GitLab/SecureSignIn/SecureSignIn-Mobile/build-SecureSignIn-Qt-Android_for_arm64_v8a_Clang_Qt_5_12_2_for_Android_ARM64_v8a-Release/android-build/build/intermediates/incremental/mergeDebugResources/merged.dir/values-ms/values-ms.xml",
+            "map": [
+                {
+                    "source": "/home/zander/Qt/5.12.2/android_arm64_v8a/src/android/java/res/values-ms/strings.xml",
+                    "from": {
+                        "startLines": "4,3,2",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "294,168,55",
+                        "endColumns": "104,125,112",
+                        "endOffsets": "394,289,163"
+                    },
+                    "to": {
+                        "startLines": "2,3,4",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,160,286",
+                        "endColumns": "104,125,112",
+                        "endOffsets": "155,281,394"
+                    }
+                }
+            ]
+        }
+    ]
+}

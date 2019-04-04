@@ -1,0 +1,45 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/zander/GitLab/SecureSignIn/SecureSignIn-Mobile/build-SecureSignIn-Qt-Android_for_arm64_v8a_Clang_Qt_5_12_2_for_Android_ARM64_v8a-Debug/android-build/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "map": [
+                {
+                    "source": "/home/zander/GitLab/SecureSignIn/SecureSignIn-Mobile/build-SecureSignIn-Qt-Android_for_arm64_v8a_Clang_Qt_5_12_2_for_Android_ARM64_v8a-Debug/android-build/res/values/libs.xml",
+                    "from": {
+                        "startLines": "76,28,9,13,2",
+                        "startColumns": "4,4,4,5,4",
+                        "startOffsets": "5604,678,291,347,55",
+                        "endLines": "919,75,11,26,4",
+                        "endColumns": "12,12,12,13,12",
+                        "endOffsets": "120862,5599,340,672,165"
+                    },
+                    "to": {
+                        "startLines": "2,846,894,897,911",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,115318,120244,120298,120628",
+                        "endLines": "845,893,896,910,913",
+                        "endColumns": "12,12,12,13,12",
+                        "endOffsets": "115313,120239,120293,120623,120738"
+                    }
+                },
+                {
+                    "source": "/home/zander/Qt/5.12.2/android_arm64_v8a/src/android/java/res/values/strings.xml",
+                    "from": {
+                        "startLines": "5,4,3,6",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "319,197,85,427",
+                        "endColumns": "107,121,111,84",
+                        "endOffsets": "422,314,192,507"
+                    },
+                    "to": {
+                        "startLines": "914,915,916,917",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "120743,120851,120973,121085",
+                        "endColumns": "107,121,111,84",
+                        "endOffsets": "120846,120968,121080,121165"
+                    }
+                }
+            ]
+        }
+    ]
+}

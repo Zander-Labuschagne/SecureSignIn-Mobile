@@ -93,7 +93,6 @@ Page {
 			x: compact_switch.width - width - compact_switch.rightPadding;
 			y: parent.height / 2 - height / 2;
 			radius: 13;
-//			color: compact_switch.checked ? "#8897f4" : "#1F2127";
 			color: "#1F2127";
 			border.color: "#00c4dc";
 			Rectangle {
