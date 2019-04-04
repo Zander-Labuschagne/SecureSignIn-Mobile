@@ -1,3 +1,25 @@
+/**
+ * Copyright (C) 2019 Zander Labuschagne. All rights reserved.
+ * @version 3.0.0 05/04/19
+ * @since 3.0.0
+ *
+ * Authors:
+ *         @author Zander Labuschagne <zander.labuschagne@protonmail.ch>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU GPL 2.0 License, as published by the
+ * Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GPL 2.0 License for more details.
+ *
+ * You should have received a copy of the GNU GPL 2.0 License
+ * along with this program; if not, write to the author,
+ * contact details above in line 7.
+ */
+
 import QtQuick 2.9
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.5
@@ -13,36 +35,6 @@ ApplicationWindow {
 	Main_Form {
 		id: main_form;
 	}
-
-	//signals
-//	signal encrypt();
-
-//	Binding {
-//		target: main_form;
-//		property: "password";
-//		value: password_input.text;
-//	}
-//	Binding {
-//		target: main_form
-//		property: "key";
-//		value: key_input.text;
-//	}
-//	Binding {
-//		target: main_form;
-//		property: "cipher_password";
-//		value: password_output.text;
-//	}
-
-	//slots
-//	function on_encrypted(password)
-//	{
-//		console.log('DONE!');
-////		OutputForm.password = s;
-////		output_form.password = password;
-//		output_form.password_output.text = password;
-//		stackview.push("qrc:/OutputForm.qml");
-//	}
-
 
 	StackView {
 		id: stackview;
