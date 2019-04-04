@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<RCC>
-    <qresource prefix="/">
-        <file alias="res/cryogen_blue_portrait_dark_theme.png">../SecureSignIn-Qt/res/cryogen_blue_portrait_dark_theme.png</file>
-    </qresource>
-</RCC>
