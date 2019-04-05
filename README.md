@@ -27,7 +27,13 @@ Copyright (C) 2019 Zander Labuschagne. This program is free software: you can re
 #### Installation:
 Copy the *SecureSignIn_arm64_v8a.apk* Android binary file found inside the *bin* folder to you Android smartphone/tablet device using a USB cable.
 
-#### How to use application:
+#### How to use application (also see screens below):
   1. Enter a password you will remember in the password box, preferably a strong and complicated password because this will influence the complexity of the resulting password.
   2. Enter a key, such as google, facebook or whatever.
   3. Click on Encrypt Password and the rest is self explanatory. The password is cleared from memory after 8 seconds when copying the password.
+
+#### Screens
+![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/screens/front_end.png "Main view. Enter password and key in text fields.")
+![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/screens/front_end_compact.png "Main view showing example. In this case the `compact password` option is enabled to shorten the password if necessary.")
+![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/screens/output_view.png "Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over.")
+
