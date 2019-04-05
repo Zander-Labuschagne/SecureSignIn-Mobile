@@ -33,7 +33,10 @@ Copy the *SecureSignIn_arm64_v8a.apk* Android binary file found inside the *bin*
   3. Click on Encrypt Password and the rest is self explanatory. The password is cleared from memory after 8 seconds when copying the password.
 
 #### Screens
-![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/front_end.png "Main view. Enter password and key in text fields." =250x)
-![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/front_end_compact.png "Main view showing example. In this case the `compact password` option is enabled to shorten the password if necessary.")
-![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/output_view.png "Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over.")
+<img src="https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/front_end.png" alt="Main view. Enter password and key in text fields." width="300" align="middle"/>
+<!--![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/front_end.png =720x "Main view. Enter password and key in text fields.")-->
+<img src="https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/front_end_compact.png" alt="Main view showing example. In this case the `compact password` option is enabled to shorten the password if necessary." width="300" align="middle"/>
+<!--![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/front_end_compact.png "Main view showing example. In this case the `compact password` option is enabled to shorten the password if necessary.")-->
+<img src="https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/output_view.png" alt="Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over." width="300" align="middle"/>
+<!--![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/output_view.png "Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over.")-->
 
