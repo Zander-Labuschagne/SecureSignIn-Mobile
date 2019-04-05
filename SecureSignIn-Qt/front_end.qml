@@ -1,11 +1,38 @@
+/**
+ * Copyright (C) 2019 Zander Labuschagne. All rights reserved.
+ * @version 3.0.0 05/04/19
+ * @since 3.0.0
+ *
+ * Authors:
+ *         @author Zander Labuschagne <zander.labuschagne@protonmail.ch>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU GPL 2.0 License, as published by the
+ * Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GPL 2.0 License for more details.
+ *
+ * You should have received a copy of the GNU GPL 2.0 License
+ * along with this program; if not, write to the author,
+ * contact details above in line 7.
+ */
+
 import QtQuick 2.9
 import QtQuick.Controls 2.5
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.3
 import QtQuick.Dialogs 1.2
 
+/**
+ * @brief Shows main view(GUI) upon executing the app
+ * @since 3.0.0
+ * front_end.qml
+*/
 Page {
-
+	id: front_end_main;
 	width: Screen.desktopAvailableWidth;
 	height: Screen.desktopAvailableHeight;
 	visible: true;
@@ -174,7 +201,7 @@ Page {
 				main_form.key = key_input.text;
 				main_form.compact = compact_switch.checked;
 				main_form.encrypt_clicked();
-				stackview.push("qrc:/OutputForm.qml");
+				stack_view.push("qrc:/output_view.qml");
 			} else if (password_input.length > 1) {
 				key_error.visible = true;
 			} else {

@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 
 	QGuiApplication app(argc, argv);
 
-	qmlRegisterType<BackEnd>("Cryogen.BackEnd", 1, 0, "BackEnd"); //Registers the MainForm class to be accessible in the QML class by importing <cryogen.main_form 1.0>
+	qmlRegisterType<BackEnd>("Cryogen.BackEnd", 1, 0, "BackEnd"); //Registers the MainForm class to be accessible in the QML class by importing <cryogen.BackEnd 1.0>
 
 	QQmlApplicationEngine engine;
 	engine.load(QUrl(QStringLiteral("qrc:/main.qml")));

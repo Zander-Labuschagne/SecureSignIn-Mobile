@@ -20,26 +20,27 @@
  * contact details above in line 7.
  */
 
-import QtQuick 2.9
-import QtQuick.Window 2.2
-import QtQuick.Controls 2.5
-import Cryogen.BackEnd 1.0
+#include "worker_thread.hpp"
 
-ApplicationWindow {
-	id: secure_sign_in_mobile_app;
-	visible: true;
-	width: 720; //TODO: Test on other devices
-	height: 1280;
-	title: qsTr("Secure Sign In");
+/**
+ * @brief Overloaded constructor
+ * worker_thread.cpp
+ * @since 3.0.0
+*/
+WorkerThread::WorkerThread(QObject *parent) : QThread()
+{
 
-	BackEnd {
-		id: back_end;
-	}
+}
 
-	StackView {
-		id: stack_view;
-		initialItem:
-		MainForm {
-		}
-	}
+/**
+ * @brief Waits until 8 seconds has elapsed followed by emitting done_waiting() signal
+ * Used to halt operations while waiting for user to complete actions such as pasting the password into website password box
+ * worker_thread.cpp
+ * @since 3.0.0
+*/
+void WorkerThread::run()
+{
+       /* ... here is the expensive or blocking operation ... */
+       sleep(8);
+       emit done_waiting();
 }

@@ -30,7 +30,7 @@
 /**
  * @brief The BackEnd class
  * back_end.hpp
- * Purpose: Provides functionality for the GUI(front end), containing the following members along with their accessor and mutator functions where necesarry:
+ * Purpose: Provides functionality for the GUI(front end), containing the following members along with their accessor and mutator functions where necessary:
  * password: Holds the original password entered by the user.
  * key: Holds the key entered by the user.
  * compact: Indicate whether the user opted for the compact version of the password.
@@ -40,13 +40,14 @@
 class BackEnd : public QObject
 {
 	Q_OBJECT
-	Q_PROPERTY(QString cipher_password READ get_cipher_password WRITE set_cipher_password NOTIFY password_encrypted) //The QProperty declares a property to be accessed from QML
-	Q_PROPERTY(QString password READ get_password WRITE set_password NOTIFY password_changed)
-	Q_PROPERTY(QString key READ get_key WRITE set_key NOTIFY key_changed)
-	Q_PROPERTY(bool compact READ get_compact WRITE set_compact NOTIFY compact_changed)
+	//The QProperty declares a property to be accessed from QML
+	Q_PROPERTY(QString cipher_password READ get_cipher_password WRITE set_cipher_password NOTIFY password_encrypted) // Read only
+	Q_PROPERTY(QString password READ get_password WRITE set_password NOTIFY password_changed) // Write only
+	Q_PROPERTY(QString key READ get_key WRITE set_key NOTIFY key_changed) // Write only
+	Q_PROPERTY(bool compact READ get_compact WRITE set_compact NOTIFY compact_changed) // Write only
 
 public:
-	explicit BackEnd(QObject *parent = nullptr);
+	explicit BackEnd(QObject *parent = nullptr); // Default constructor with default value for parameter
 	~BackEnd(); //Default destructor
 
 	void set_password(const QString password);
@@ -62,10 +63,10 @@ public slots:
 	void copy_clicked();
 	void clear();
 signals:
-	void password_encrypted();
-	void password_changed();
-	void key_changed();
-	void compact_changed();
+	void password_encrypted(); // Fires when the password is encrypted, signals to update the front end
+	void password_changed(); // Not used as this is one way communication from QML(front end) to C++ (back end)
+	void key_changed(); // Not used as this is one way communication from QML(front end) to C++ (back end)
+	void compact_changed(); // Not used as this is one way communication from QML(front end) to C++ (back end)
 private:
 	QString password;
 	QString key;

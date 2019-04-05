@@ -1,10 +1,38 @@
+/**
+ * Copyright (C) 2019 Zander Labuschagne. All rights reserved.
+ * @version 3.0.0 05/04/19
+ * @since 3.0.0
+ *
+ * Authors:
+ *         @author Zander Labuschagne <zander.labuschagne@protonmail.ch>
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU GPL 2.0 License, as published by the
+ * Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GPL 2.0 License for more details.
+ *
+ * You should have received a copy of the GNU GPL 2.0 License
+ * along with this program; if not, write to the author,
+ * contact details above in line 7.
+ */
+
+
 import QtQuick 2.9
 import QtQuick.Controls 2.5
 import QtQuick.Controls.Styles 1.4
 import QtQuick.Window 2.3
 
+/**
+ * @brief Shows output view after encrypting the password
+ * @since 3.0.0
+ * output_view.qml
+*/
 Page {
-	id: output_form;
+	id: output_view;
 	width: Screen.desktopAvailableWidth;
 	height: Screen.desktopAvailableHeight;
 	visible: true;
@@ -41,9 +69,9 @@ Page {
 	    padding: 0;
 	    leftPadding: 12
 	    rightPadding: 12;
-	    topPadding: length > 0 ? 10 : 5;
-	    bottomPadding: 5;
-	    text: main_form.cipher_password;
+	    topPadding: 2;
+	    bottomPadding: 0;
+	    text: back_end.cipher_password;
 	}
 
 	Button {
@@ -70,10 +98,14 @@ Page {
 			color: reveal.down ? "#8897f4" : "#1F2127";
 		    }
 		onClicked: {
-			if (password_output.echoMode == TextInput.Password)
+			if (password_output.echoMode == TextInput.Password) {
 				password_output.echoMode = TextInput.Normal;
-			else
+				reveal.text = "Hide Password";
+			}
+			else {
 				password_output.echoMode = TextInput.Password;
+				reveal.text = "Reveal Password";
+			}
 		}
 	}
 
@@ -92,14 +124,17 @@ Page {
 			horizontalAlignment: Text.AlignHCenter
 			verticalAlignment: Text.AlignVCenter
 			elide: Text.ElideRight;
-		    }
+		}
 
-		    background: Rectangle {
+		background: Rectangle {
 			border.color: copy.down ? "#00c4dc" : "#000000";
 			border.width: 1;
 			radius: 5;
 			color: copy.down ? "#8897f4" : "#1F2127";
-		    }
+		}
+		onClicked:
+		    back_end.copy_clicked();
+
 	}
 
 	Button {
@@ -126,7 +161,7 @@ Page {
 			color: ok.down ? "#8897f4" : "#1F2127";
 		}
 		onClicked: {
-			stackview.pop();
+			stack_view.pop();
 		}
 	}
 }

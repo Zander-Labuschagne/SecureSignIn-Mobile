@@ -23,7 +23,7 @@
 #include "back_end.hpp"
 
 #include <secure_sign_in.hpp>
-#include <workerthread.hpp>
+#include <worker_thread.hpp>
 
 /**
  * @brief Constructor
@@ -64,10 +64,10 @@ void BackEnd::encrypt_clicked()
 void BackEnd::copy_clicked()
 {
 	//wait 8sec on new thread
-	WorkerThread *workerThread = new WorkerThread(this);
-	connect(workerThread, &WorkerThread::resultReady, this, &BackEnd::clear);
-	connect(workerThread, &WorkerThread::finished, workerThread, &QObject::deleteLater);
-	workerThread->start();
+	WorkerThread *waiter_thread = new WorkerThread(this);
+	connect(waiter_thread, &WorkerThread::done_waiting, this, &BackEnd::clear);
+	connect(waiter_thread, &WorkerThread::finished, waiter_thread, &QObject::deleteLater);
+	waiter_thread->start();
 }
 
 /**
@@ -161,7 +161,7 @@ bool BackEnd::get_compact()
 /**
  * @brief cipher_password mutator.
  * back_end.cpp
- * assogns the encrypted password.
+ * assigns the encrypted password.
  * @since 3.0.0
  */
 void BackEnd::set_cipher_password(const QString &cipher_password)
@@ -198,7 +198,7 @@ QClipboard* BackEnd::get_clipboard()
 /**
  * @brief default destructor.
  * back_end.cpp
- * ensurees that no memory is left assigned and that all relevant variables are cleared.
+ * ensures that no memory is left assigned and that all relevant variables are cleared.
  * @since 3.0.0
  */
 BackEnd::~BackEnd()
