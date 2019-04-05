@@ -33,7 +33,7 @@ Copy the *SecureSignIn_arm64_v8a.apk* Android binary file found inside the *bin*
   3. Click on Encrypt Password and the rest is self explanatory. The password is cleared from memory after 8 seconds when copying the password.
 
 #### Screens
-![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/screens/front_end.png "Main view. Enter password and key in text fields.")
-![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/screens/front_end_compact.png "Main view showing example. In this case the `compact password` option is enabled to shorten the password if necessary.")
-![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/screens/output_view.png "Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over.")
+![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/blob/master/screens/front_end.png "Main view. Enter password and key in text fields.")
+![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/blob/master/screens/front_end_compact.png "Main view showing example. In this case the `compact password` option is enabled to shorten the password if necessary.")
+![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/blob/master/screens/output_view.png "Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over.")
 
