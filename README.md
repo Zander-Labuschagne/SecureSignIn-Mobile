@@ -1,5 +1,5 @@
 # Secure Sign In Mobile v3
-This is a mobile application I have created in an attempt to improve my online account security, it is the latest mobile version (*v3*) of my Secure Sign In project and replaces the Android version (_v2_). The older(and now discontinued) pure Android version can be found at https://gitlab.com/Zander-Labuschagne/SecureSignIn-Android. 
+This is a mobile application I have created in an attempt to improve my online account security, it is the latest mobile version (*v3*) of my Secure Sign In project and replaces the Android version (_v2_). The older(and now discontinued) pure Android version can be found at https://gitlab.com/Zander-Labuschagne/SecureSignIn-Android. The user provides a password with an accompanying key that is unique to the website(or account) requiring the password, the application then provides a lengthy and complicated password to be used instead.
 
 #### Compatibility notes:
   - Android 4.1 or later is required to use this application._ Please send me an e-mail if this is not the case.
