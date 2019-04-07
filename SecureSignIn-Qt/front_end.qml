@@ -197,10 +197,10 @@ Page {
 		    }
 		onClicked: {
 			if (password_input.length > 1 && key_input.length > 1) {
-				main_form.password = password_input.text;
-				main_form.key = key_input.text;
-				main_form.compact = compact_switch.checked;
-				main_form.encrypt_clicked();
+				back_end.password = password_input.text;
+				back_end.key = key_input.text;
+				back_end.compact = compact_switch.checked;
+				back_end.encrypt_clicked();
 				stack_view.push("qrc:/output_view.qml");
 			} else if (password_input.length > 1) {
 				key_error.visible = true;

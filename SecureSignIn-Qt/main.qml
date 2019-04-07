@@ -38,8 +38,6 @@ ApplicationWindow {
 
 	StackView {
 		id: stack_view;
-		initialItem:
-		MainForm {
-		}
+		initialItem: "front_end.qml";
 	}
 }
