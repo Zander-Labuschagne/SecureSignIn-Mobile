@@ -4,7 +4,6 @@ This is a mobile application I have created in an attempt to improve my online a
 #### Compatibility notes:
   - Android 4.1 or later is required to use this application._ Please send me an e-mail if this is not the case.
   - *This application was so far only tested on a Sony Xperia X Compact running Android 8.0.0.*
-  - I *think* it should be compatible with Sailfish OS devices, I am very curious to test this.
 
 #### Benifits:
   - Remember one password for all sites, but all sites have different passwords.
@@ -17,6 +16,7 @@ This is my first C++(Qt/QML) application for Android/mobile devices I have creat
 There are desktop applications available as well, however some are not always up to date and I have left some of them discontinued/incomplete. I work on these projects in my free time only so don't expect regular updates from me.
 
 Desktop version: https://gitlab.com/Zander-Labuschagne/SecureSignIn-v4b
+Sailfish OS version: *In progress*
   
 The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look impressive.
 
