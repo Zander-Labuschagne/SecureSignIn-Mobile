@@ -1,8 +1,8 @@
-# Secure Sign In Mobile v3
-This is a mobile application I have created in an attempt to improve my online account security, it is the latest mobile version (*v3*) of my Secure Sign In project and replaces the Android version (_v2_). The older(and now discontinued) pure Android version can be found at https://gitlab.com/Zander-Labuschagne/SecureSignIn-Android. The user provides a password with an accompanying key that is unique to the website(or account) requiring the password, the application then provides a lengthy and complicated password to be used instead.
+# Secure Sign In Android v3
+This is a mobile application I have created in an attempt to improve my online account security, it is the latest mobile version (*v3*) of my Secure Sign In project and replaces the Android version (_v2_). The older(and now discontinued) pure Android version can be found at https://gitlab.com/Zander-Labuschagne/SecureSignIn-Android-v2. The user provides a password with an accompanying key that is unique to the website(or account) requiring the password, the application then provides a lengthy and complicated password to be used instead.
 
 #### Compatibility notes:
-  - Android 4.1 or later is required to use this application._ Please send me an e-mail if this is not the case.
+  - Android 4.1 or later is required to use this application. Please send me an e-mail if this is not the case.
   - *This application was so far only tested on a Sony Xperia X Compact running Android 8.0.0.*
 
 #### Benifits:
@@ -12,12 +12,14 @@ This is a mobile application I have created in an attempt to improve my online a
   - No passwords are stored in file or database.
   - Easy to use.
 
-This is my first C++(Qt/QML) application for Android/mobile devices I have created. Feel free to criticize or comment on my code and practices.
+This is my first C++(Qt/QML) application for Android devices I have created. Feel free to criticize or comment on my code and practices.
 There are desktop applications available as well, however some are not always up to date and I have left some of them discontinued/incomplete. I work on these projects in my free time only so don't expect regular updates from me.
 
 Desktop version: https://gitlab.com/Zander-Labuschagne/SecureSignIn-v4b
 
 Sailfish OS version: *In progress*
+
+iOS version: *TBA*
   
 The logo and name on the application comes from an iWorks template, it is not a registered company name or logo, I just added it to make it look impressive.
 
