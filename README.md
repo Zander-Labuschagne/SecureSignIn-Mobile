@@ -41,5 +41,6 @@ Copy the *SecureSignIn_arm64_v8a.apk* Android binary file found inside the *bin*
 <!--![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/front_end_compact.png "Main view showing example. In this case the `compact password` option is enabled to shorten the password if necessary.")-->
 <img src="https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/output_view.png" alt="Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over." width="300" align="middle"/>
 <!--![alt text](https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/output_view.png "Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over.")-->
+
 #### iOS 1st Build
-<img src="https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/ios_1st_build.png" alt="Output view showing output of example. Copy the password to memory for pasting, or reveal the password for type over." width="300" align="middle"/>
+<img src="https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/ios_1st_build.png" alt="Main screen in iOS.." width="300" align="middle"/>
