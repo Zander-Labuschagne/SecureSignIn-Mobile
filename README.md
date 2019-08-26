@@ -44,3 +44,4 @@ Copy the *SecureSignIn_arm64_v8a.apk* Android binary file found inside the *bin*
 
 #### iOS 1st Build
 <img src="https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/iOS_1st_build.png" alt="Main screen in iOS.." width="300" align="middle"/>
+<img src="https://gitlab.com/Zander-Labuschagne/SecureSignIn-Mobile/raw/master/screens/iOS_1st_build2.png" alt="Output screen in iOS.." width="300" align="middle"/>
